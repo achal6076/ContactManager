@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>this is about page</title>
+</head>
+
+<body>
+	<section>
+		<div class="container text-center">
+			<div class="card my-5">
+				<div class="card-body my-5">
+					<div class="container text-center">
+						<img src="" class="my_profile_picture" style="height: 150px; width:150px"
+							th:src="@{'/img/contact_logo.png'}" alt="profile photo" />
+					</div>
+					<h1 class="text-center text-secondary font-italic font-weight-light">
+					Start adding your contact to online web server
+					</h1>
+					
+					<a th:href="@{/user/add-contact}" class="btn btn-primary mt-4 btn-block text-upperclass">Add new contact</a>
+					
+				</div>
+			</div>
+
+		</div>
+		<script>
+		$(document).ready(()=>{
+
+			
+		$('.items').removeClass('active');
+		$('#home-link').addClass("active");
+		})
+		</script>
+	</section>
+</body>
+
+</html>
